@@ -94,7 +94,11 @@ let puntosDeInteresCercanos: [String: [String]] = [
 // Diccionario aparte para destinos de interes que no son estaciones en si mismas.
 // Ejemplo: alguien quiere llegar a un lugar, no sabe el nombre exacto de la estacion.
 let destinosDeInteres: [String: (sistema: String, estacion: String)] = [
-    "Estadio Nacional del Peru": (sistema: "Metropolitano", estacion: "Estadio Nacional")
+    "Estadio Nacional del Peru": (sistema: "Metropolitano", estacion: "Estadio Nacional"),
+    "Museo de la Nacion": (sistema: "Linea 1", estacion: "La Cultura"), // Verificado: junto a la estacion.
+    "Emporio Comercial Gamarra": (sistema: "Linea 1", estacion: "Gamarra"), // Verificado: da nombre a la estacion.
+    "Campo de Marte": (sistema: "Metropolitano", estacion: "Estadio Nacional"), // Verificado: cerca de la estacion.
+    "Real Plaza Atocongo": (sistema: "Linea 1", estacion: "Atocongo") // Ilustrativo: centro comercial cercano.
 ]
 
 // Registro de lineas/sistemas existentes, para poder "crear una linea nueva" de forma explicita.

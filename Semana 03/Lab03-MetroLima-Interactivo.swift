@@ -3,13 +3,21 @@ import Foundation
 // ===== LAB 03: CONSULTA DE ESTACIONES - METRO DE LIMA (version interactiva) =====
 // Esta version corre en Terminal con "swift Lab03-MetroLima-Interactivo.swift"
 // porque readLine() SI funciona ahi (en el Playground de Xcode no funciona).
+// Docente: Juan León
 
+// ===== DATOS =====
+
+// Guarda los datos de conectividad y accesibilidad de una estacion.
 struct InfoEstacion {
     let lineas: [String]
     let tieneAscensor: Bool
     let conexion: String?
 }
 
+// Diccionario principal: clave = nombre de estacion, valor = sus datos.
+// Datos reales verificados: Linea 1 (28 estaciones), Linea 2 (5 en operacion), Metropolitano (seleccion verificada).
+// OJO: "Angamos" y "Veintiocho de Julio" existen en mas de un sistema, en ubicaciones DISTINTAS,
+// por eso se diferencian con el sistema entre parentesis.
 var estaciones: [String: InfoEstacion] = [
     // --- Linea 1 (28 estaciones) ---
     "Villa El Salvador": InfoEstacion(lineas: ["Linea 1"], tieneAscensor: true, conexion: nil),
@@ -71,10 +79,7 @@ var estaciones: [String: InfoEstacion] = [
     "Matellini": InfoEstacion(lineas: ["Metropolitano"], tieneAscensor: true, conexion: nil)
 ]
 
-func listarTodasLasEstaciones() {
-    print("Estaciones disponibles: \(estaciones.keys.sorted().joined(separator: ", "))")
-}
-
+// RF15: lugares cercanos a cada estacion. Dato ilustrativo salvo los casos marcados como verificados.
 let puntosDeInteresCercanos: [String: [String]] = [
     "La Cultura": ["Museo de la Nacion"],
     "Estadio Nacional": ["Estadio Nacional del Peru", "Campo de Marte"],
@@ -82,22 +87,101 @@ let puntosDeInteresCercanos: [String: [String]] = [
     "Atocongo": ["Real Plaza Atocongo"]
 ]
 
+// Diccionario aparte para destinos de interes que no son estaciones en si mismas.
 let destinosDeInteres: [String: (sistema: String, estacion: String)] = [
-    "Estadio Nacional del Peru": (sistema: "Metropolitano", estacion: "Estadio Nacional")
+    "Estadio Nacional del Peru": (sistema: "Metropolitano", estacion: "Estadio Nacional"),
+    "Museo de la Nacion": (sistema: "Linea 1", estacion: "La Cultura"),
+    "Emporio Comercial Gamarra": (sistema: "Linea 1", estacion: "Gamarra"),
+    "Campo de Marte": (sistema: "Metropolitano", estacion: "Estadio Nacional"),
+    "Real Plaza Atocongo": (sistema: "Linea 1", estacion: "Atocongo")
 ]
 
+// Registro de lineas/sistemas existentes, para poder "crear una linea nueva" de forma explicita.
 var lineasExistentes: Set<String> = ["Linea 1", "Linea 2", "Metropolitano"]
 
+// ===== CONSULTAS (RF01, RF02, RF03, RF04, RF05, RF06, RF15, RF16) =====
+
+// RF01 + RF03 + RF04: busca una estacion por nombre y muestra linea, ascensor y conexion.
+func buscarEstacion(nombre: String) {
+    if let info = estaciones[nombre] {
+        print("Estacion: \(nombre)")
+        print("Linea(s): \(info.lineas.joined(separator: ", "))")
+        print("Ascensor: \(info.tieneAscensor ? "Si" : "No")")
+        if let conexion = info.conexion {
+            print("Conecta con: \(conexion)")
+        } else {
+            print("No tiene conexion directa registrada con otro sistema")
+        }
+    } else {
+        // RF06: si la clave no existe en el diccionario, se informa el error.
+        print("Error: la estacion \"\(nombre)\" no existe en el sistema")
+    }
+}
+
+// RF02: lista todas las estaciones que pertenecen a una linea o sistema dado.
+func listarPorLinea(linea: String) {
+    let resultado = estaciones.filter { $0.value.lineas.contains(linea) }
+    if resultado.isEmpty {
+        print("No se encontraron estaciones para \"\(linea)\"")
+    } else {
+        print("Estaciones de \(linea):")
+        for nombre in resultado.map({ $0.key }).sorted() {
+            print("- \(nombre)")
+        }
+    }
+}
+
+// RF05: busca un destino de interes (no necesariamente el nombre exacto de una estacion).
+func buscarPorDestino(destino: String) {
+    if let info = destinosDeInteres[destino] {
+        print("Para ir a \"\(destino)\", toma: \(info.sistema), estacion \(info.estacion)")
+    } else {
+        print("No tengo informacion registrada sobre \"\(destino)\"")
+    }
+}
+
+// RF15: muestra los lugares cercanos registrados para una estacion dada.
+func verPuntosDeInteres(estacion: String) {
+    if estaciones[estacion] == nil {
+        print("Error: la estacion \"\(estacion)\" no existe en el sistema")
+        return
+    }
+    if let lugares = puntosDeInteresCercanos[estacion], !lugares.isEmpty {
+        print("Cerca de \(estacion) encontraras: \(lugares.joined(separator: ", "))")
+    } else {
+        print("No tengo lugares registrados cerca de \(estacion)")
+    }
+}
+
+// RF16: lista todas las estaciones disponibles, para no tener que memorizarlas.
+func listarTodasLasEstaciones() {
+    print("Estaciones disponibles: \(estaciones.keys.sorted().joined(separator: ", "))")
+}
+
+// RF14: lista todas las lineas/sistemas registrados actualmente.
+func listarLineas() {
+    print("Lineas registradas: \(lineasExistentes.sorted().joined(separator: ", "))")
+}
+
+// ===== TARJETA DE TRANSPORTE (RF09, RF10, RF11) =====
+
+// Representa el saldo de la tarjeta del usuario.
 struct TarjetaTransporte {
     var saldo: Double
 }
+
+// Tarjeta de ejemplo, con saldo inicial.
 var miTarjeta = TarjetaTransporte(saldo: 20.0)
+
+// Tarifa fija de ejemplo para cada viaje.
 let tarifaPasaje = 2.50
 
+// RF09: muestra el saldo actual de la tarjeta.
 func consultarSaldo() {
     print("Saldo actual: S/. \(String(format: "%.2f", miTarjeta.saldo))")
 }
 
+// RF10: recarga saldo a la tarjeta, validando que el monto sea valido.
 func recargarSaldo(monto: Double) {
     if monto <= 0 {
         print("Error: el monto de recarga debe ser mayor a 0")
@@ -108,6 +192,7 @@ func recargarSaldo(monto: Double) {
     consultarSaldo()
 }
 
+// RF11: cobra el pasaje si hay saldo suficiente, si no muestra error.
 func cobrarPasaje() {
     if miTarjeta.saldo >= tarifaPasaje {
         miTarjeta.saldo -= tarifaPasaje
@@ -118,6 +203,9 @@ func cobrarPasaje() {
     }
 }
 
+// ===== MODO ADMINISTRADOR (RF12, RF13) =====
+
+// RF12: agrega una estacion nueva a una linea; si la linea no existe, la crea automaticamente.
 func agregarEstacion(nombre: String, linea: String, tieneAscensor: Bool, conexion: String?) {
     if estaciones[nombre] != nil {
         print("Error: la estacion \"\(nombre)\" ya existe")
@@ -131,6 +219,7 @@ func agregarEstacion(nombre: String, linea: String, tieneAscensor: Bool, conexio
     print("Estacion \"\(nombre)\" agregada a \(linea)")
 }
 
+// RF13: crea una linea nueva vacia (sin estaciones todavia), lista para agregarle estaciones despues.
 func crearLineaNueva(nombre: String) {
     if lineasExistentes.contains(nombre) {
         print("Error: la linea \"\(nombre)\" ya existe")
@@ -140,69 +229,21 @@ func crearLineaNueva(nombre: String) {
     }
 }
 
-func listarLineas() {
-    print("Lineas registradas: \(lineasExistentes.sorted().joined(separator: ", "))")
-}
-
-func buscarEstacion(nombre: String) {
-    if let info = estaciones[nombre] {
-        print("Estacion: \(nombre)")
-        print("Linea(s): \(info.lineas.joined(separator: ", "))")
-        print("Ascensor: \(info.tieneAscensor ? "Si" : "No")")
-        if let conexion = info.conexion {
-            print("Conecta con: \(conexion)")
-        } else {
-            print("No tiene conexion directa registrada con otro sistema")
-        }
-    } else {
-        print("Error: la estacion \"\(nombre)\" no existe en el sistema")
-    }
-}
-
-func listarPorLinea(linea: String) {
-    let resultado = estaciones.filter { $0.value.lineas.contains(linea) }
-    if resultado.isEmpty {
-        print("No se encontraron estaciones para \"\(linea)\"")
-    } else {
-        print("Estaciones de \(linea):")
-        for nombre in resultado.map({ $0.key }).sorted() {
-            print("- \(nombre)")
-        }
-    }
-}
-
-func buscarPorDestino(destino: String) {
-    if let info = destinosDeInteres[destino] {
-        print("Para ir a \"\(destino)\", toma: \(info.sistema), estacion \(info.estacion)")
-    } else {
-        print("No tengo informacion registrada sobre \"\(destino)\"")
-    }
-}
-
-func verPuntosDeInteres(estacion: String) {
-    if estaciones[estacion] == nil {
-        print("Error: la estacion \"\(estacion)\" no existe en el sistema")
-        return
-    }
-    if let lugares = puntosDeInteresCercanos[estacion], !lugares.isEmpty {
-        print("Cerca de \(estacion) encontraras: \(lugares.joined(separator: ", "))")
-    } else {
-        print("No tengo lugares registrados cerca de \(estacion)")
-    }
-}
-
 // ===== MENU INTERACTIVO REAL (con readLine, solo funciona en Terminal) =====
 
+// Imprime un mensaje sin salto de linea y lee la respuesta escrita por el usuario.
 func pedirTexto(_ mensaje: String) -> String {
     print(mensaje, terminator: "> ")
     return readLine() ?? ""
 }
 
+// Igual que pedirTexto, pero convierte la respuesta a numero (0.0 si no es un numero valido).
 func pedirNumero(_ mensaje: String) -> Double {
     print(mensaje, terminator: "> ")
     return Double(readLine() ?? "") ?? 0.0
 }
 
+// Submenu de administracion (opcion 6 del menu principal).
 func menuAdministrador() {
     var seguir = true
     while seguir {
@@ -234,6 +275,7 @@ func menuAdministrador() {
     }
 }
 
+// Menu principal de la aplicacion (RF07).
 func iniciarApp() {
     var continuar = true
     while continuar {
@@ -292,4 +334,5 @@ func iniciarApp() {
     }
 }
 
+// ===== PUNTO DE ENTRADA =====
 iniciarApp()

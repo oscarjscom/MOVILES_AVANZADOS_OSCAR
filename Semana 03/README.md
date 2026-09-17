@@ -12,7 +12,7 @@ Sistema de consulta en consola sobre el Metro de Lima (Línea 1 y Línea 2) y el
 | RF02 | Listar todas las estaciones de una línea dada (ej. "estaciones de la Línea 2"). |
 | RF03 | Indicar si una estación es intermodal (conecta con otra línea o con el Metropolitano) y con cuál. |
 | RF04 | Indicar si una estación cuenta con ascensores (accesibilidad). |
-| RF05 | Buscar por destino de interés (ej. "Estadio Nacional") y sugerir la estación/sistema más cercano. |
+| RF05 | Buscar por destino de interés (ej. "Estadio Nacional del Peru", "Museo de la Nacion", "Emporio Comercial Gamarra", "Campo de Marte", "Real Plaza Atocongo") y sugerir la estación/sistema más cercano. |
 | RF06 | Manejar el caso de una estación que no existe, con mensaje de error claro. |
 | RF07 | Mostrar un menú de opciones: buscar estación, listar por línea, buscar por destino, salir. |
 | RF08 (bonus) | Sugerir una ruta entre dos estaciones (con trasbordo si aplica). |

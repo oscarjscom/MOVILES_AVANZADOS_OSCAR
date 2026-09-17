@@ -77,3 +77,17 @@ Sí, pero fue clave revisar primero si había nombres de estación repetidos ent
 
 ### ¿La IA usó algo que no conocías?
 Sí, que el `filter` y las demás funciones sobre diccionarios en Swift no distinguen si dos entradas "deberían" ser la misma estación — solo comparan por la clave exacta. Por eso hay que resolver las colisiones de nombre en los datos mismos (con un sufijo), no en la lógica.
+
+## Mas destinos de interes
+
+### Prompt (estructura CTRFE):
+CONTEXTO: El diccionario destinosDeInteres solo tenia una entrada (Estadio Nacional del Peru).
+TAREA: Agrega mas destinos de interes conocidos de Lima, enlazados a estaciones que ya existen en el diccionario de estaciones.
+RESTRICCIONES: Reutilizar solo lugares ya verificados en puntosDeInteresCercanos (Museo de la Nacion, Emporio Comercial Gamarra, Campo de Marte, Real Plaza Atocongo), para no inventar datos nuevos sin verificar.
+FORMATO: Mismo estilo del archivo, actualizar Playground e interactivo por igual.
+
+### ¿Funcionó a la primera?
+Sí, fue directo porque ya existian los mismos lugares verificados en puntosDeInteresCercanos, solo hubo que enlazarlos como destinos de busqueda tambien.
+
+### ¿La IA usó algo que no conocías?
+No en este caso, fue una extension directa del mismo patron ya usado en destinosDeInteres.

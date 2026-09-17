@@ -189,8 +189,12 @@ func sugerirRuta(origen: String, destino: String) {
 }
 
 // RF16: lista todas las estaciones disponibles, para no tener que memorizarlas.
+// Se imprime una por linea (en vez de todas juntas) para que sea facil de leer en la Terminal.
 func listarTodasLasEstaciones() {
-    print("Estaciones disponibles: \(estaciones.keys.sorted().joined(separator: ", "))")
+    print("Estaciones disponibles:")
+    for nombre in estaciones.keys.sorted() {
+        print("  - \(nombre)")
+    }
 }
 
 // RF14: lista todas las lineas/sistemas registrados actualmente.
@@ -337,7 +341,10 @@ func iniciarApp() {
             let linea = pedirTexto("Linea (ej. Linea 1, Linea 2, Metropolitano)")
             listarPorLinea(linea: linea)
         case "3":
-            print("Destinos de interes registrados: \(destinosDeInteres.keys.sorted().joined(separator: ", "))")
+            print("Destinos de interes registrados:")
+            for nombre in destinosDeInteres.keys.sorted() {
+                print("  - \(nombre)")
+            }
             let destino = pedirTexto("Destino de interes")
             buscarPorDestino(destino: destino)
         case "4":

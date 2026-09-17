@@ -79,8 +79,12 @@ var estaciones: [String: InfoEstacion] = [
 ]
 
 // RF16: lista todas las estaciones disponibles, para no tener que memorizarlas.
+// Se imprime una por linea (en vez de todas juntas) para que sea facil de leer.
 func listarTodasLasEstaciones() {
-    print("Estaciones disponibles: \(estaciones.keys.sorted().joined(separator: ", "))")
+    print("Estaciones disponibles:")
+    for nombre in estaciones.keys.sorted() {
+        print("  - \(nombre)")
+    }
 }
 
 // RF15: lugares cercanos a cada estacion. Dato ilustrativo salvo los casos marcados como verificados.

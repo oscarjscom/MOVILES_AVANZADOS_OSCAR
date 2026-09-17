@@ -35,3 +35,45 @@ Sí. Se verificó a mano el orden de ejecución del Playground (de arriba hacia 
 
 ### ¿La IA usó algo que no conocías?
 Sí, usar un `Set<String>` (en vez de un array) para el registro de líneas existentes, y `Optional == nil` para revisar si una clave ya existe en el diccionario antes de agregarla. Lo investigué: `Set` evita duplicados automáticamente, y comparar contra `nil` es una forma corta de preguntar "¿ya existe esta clave?".
+
+## Lugares cercanos a una estación
+
+### Prompt (estructura CTRFE):
+CONTEXTO: Ya tengo la app de consulta de estaciones, la tarjeta de transporte y el modo administrador.
+TAREA: Agrega una funcion que, dado el nombre de una estacion, muestre los lugares o puntos de interes cercanos (si hay datos registrados), y que distinga entre "la estacion no existe" y "la estacion existe pero no tiene lugares registrados".
+RESTRICCIONES: Usar datos reales verificados cuando sea posible (ej. Museo de la Nacion junto a la estacion La Cultura, o el propio Estadio Nacional junto a la estacion Estadio Nacional). Marcar como ilustrativo cualquier dato que no se pudo verificar.
+FORMATO: Mismo estilo del archivo, con comentario en cada linea, y agregarlo a la simulacion y al menu.
+
+### ¿Funcionó a la primera?
+Sí. Antes de escribir los datos se verificó que la estación "La Cultura" (Línea 1) está junto al Museo de la Nación, y que "Gamarra" da nombre al Emporio Comercial Gamarra — el dato de "Real Plaza Atocongo" se dejó marcado como ilustrativo porque no se verificó contra una fuente oficial.
+
+### ¿La IA usó algo que no conocías?
+Sí, encadenar `if let lugares = diccionario[clave], !lugares.isEmpty` en una sola condición. Lo investigué: primero intenta desenvolver el optional, y si lo logra, además revisa que el array no esté vacío — solo entra al bloque si se cumplen las dos cosas.
+
+## Version interactiva real (readLine en Terminal)
+
+### Prompt (estructura CTRFE):
+CONTEXTO: La version del Playground simula las consultas con llamadas directas porque readLine() no funciona ahi.
+TAREA: Crea una version aparte, en un archivo .swift normal (no un Playground), con un menu interactivo de verdad usando readLine(), que llame a las mismas funciones ya escritas.
+RESTRICCIONES: No modificar el Playground oficial. El archivo nuevo debe poder correrse con "swift archivo.swift" desde Terminal.
+FORMATO: Un solo archivo .swift con todo el codigo necesario (duplicando los datos y funciones del Playground, ya que un script suelto no puede importar otro archivo sin un paquete de Swift).
+
+### ¿Funcionó a la primera?
+Sí, aunque hubo que investigar que Xcode Playground no soporta stdin real, y que por eso hacia falta correrlo como script en Terminal para que `readLine()` funcione de verdad.
+
+### ¿La IA usó algo que no conocías?
+Sí, `print(mensaje, terminator: "> ")` para imprimir un mensaje sin salto de linea y dejar el cursor listo para escribir la respuesta al lado. Lo investigué: el parametro `terminator` reemplaza el salto de linea por defecto de `print`.
+
+## Completar el diccionario con todas las estaciones reales
+
+### Prompt (estructura CTRFE):
+CONTEXTO: El diccionario de estaciones solo tenia 11 estaciones de ejemplo, no todas las reales que ya estaban documentadas en el README.
+TAREA: Completa el diccionario con todas las estaciones verificadas (Linea 1 completa, Linea 2 las 5 en operacion, y una seleccion amplia del Metropolitano), y agrega una funcion para listar todas las estaciones disponibles, para no tener que memorizarlas al usar el menu interactivo.
+RESTRICCIONES: No inventar estaciones. Si el mismo nombre existe en mas de un sistema en ubicaciones distintas (Angamos, Veintiocho de Julio), diferenciarlas para no tratarlas como si fueran la misma estacion fisica.
+FORMATO: Actualizar tanto el Playground como la version interactiva con los mismos datos.
+
+### ¿Funcionó a la primera?
+Sí, pero fue clave revisar primero si había nombres de estación repetidos entre sistemas antes de simplemente agregar todo al diccionario — de lo contrario, agregar la "Angamos" del Metropolitano hubiera sobrescrito la "Angamos" de la Línea 1 (son ubicaciones distintas).
+
+### ¿La IA usó algo que no conocías?
+Sí, que el `filter` y las demás funciones sobre diccionarios en Swift no distinguen si dos entradas "deberían" ser la misma estación — solo comparan por la clave exacta. Por eso hay que resolver las colisiones de nombre en los datos mismos (con un sufijo), no en la lógica.

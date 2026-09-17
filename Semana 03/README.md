@@ -22,6 +22,8 @@ Sistema de consulta en consola sobre el Metro de Lima (Línea 1 y Línea 2) y el
 | RF12 | Modo administrador: agregar una estación nueva a una línea (existente o nueva). |
 | RF13 | Modo administrador: crear una línea nueva vacía, sin estaciones todavía. |
 | RF14 | Modo administrador: listar todas las líneas/sistemas registrados. |
+| RF15 | Mostrar lugares/puntos de interés cercanos a una estación dada (si hay datos registrados). |
+| RF16 | Listar todas las estaciones disponibles (para no tener que memorizarlas al buscar). |
 
 ## Estructura de datos
 
@@ -35,18 +37,26 @@ struct InfoEstacion {
 
 ## Datos reales verificados (Wikipedia, 2026)
 
-**Línea 1** (27 estaciones, operativa): Villa El Salvador, Parque Industrial, Pumacahua, Villa María, María Auxiliadora, San Juan, Atocongo, Jorge Chávez, Ayacucho, Cabitos, Angamos, San Borja Sur, La Cultura, Arriola, Gamarra, Veintiocho de Julio, Miguel Grau, El Ángel, Presbítero Maestro, Rio Rímac, Caja de Agua, Pirámide del Sol, Los Jardines, Los Postes, San Carlos, San Martín, Santa Rosa, Bayóvar.
+El diccionario `estaciones` ahora incluye **53 estaciones reales** (todas las verificadas, no solo una muestra):
 
-**Línea 2** (5 en operación desde 2023 / 27 planeadas): tramo activo Evitamiento → Mercado Santa Anita (Evitamiento, Óvalo Santa Anita, Colectora Industrial, Hermilio Valdizán, Mercado Santa Anita). El resto sigue en construcción.
+**Línea 1** (28 estaciones, operativa): Villa El Salvador, Parque Industrial, Pumacahua, Villa María, María Auxiliadora, San Juan, Atocongo, Jorge Chávez, Ayacucho, Cabitos, Angamos, San Borja Sur, La Cultura, Arriola, Gamarra, Veintiocho de Julio, Miguel Grau, El Ángel, Presbítero Maestro, Rio Rímac, Caja de Agua, Pirámide del Sol, Los Jardines, Los Postes, San Carlos, San Martín, Santa Rosa, Bayóvar.
+
+**Línea 2** (5 en operación desde 2023 / 27 planeadas): tramo activo Evitamiento → Mercado Santa Anita (Evitamiento, Óvalo Santa Anita, Colectora Industrial, Hermilio Valdizán, Mercado Santa Anita). El resto sigue en construcción, no está en el diccionario.
+
+**Metropolitano** (selección de 20 estaciones del corredor troncal, verificadas): Nicolás Ayllón, Naranjal, Tomás Valle, Honorio Delgado, UNI, Caquetá, Estación Central, Colmena, España, Abancay, Estadio Nacional, México, Javier Prado, Canaval y Moreyra, Angamos, Ricardo Palma, Benavides, Veintiocho de Julio, Surco, Matellini (no es la lista completa de las ~65 del sistema, solo las que se pudieron verificar con confianza).
 
 **Conexiones intermodales reales confirmadas (Metropolitano ↔ Línea 1):**
 - Nicolás Ayllón (Intermodal M–L1)
 - Atocongo (Intermodal M–L1)
 
-**Nota:** existen tres estaciones distintas llamadas "Veintiocho de Julio" (Línea 1, Línea 2 y Metropolitano), en ubicaciones diferentes — el nombre repetido no implica que sea la misma estación física.
+**Importante — nombres repetidos en sistemas distintos:** "Angamos" y "Veintiocho de Julio" existen tanto en Línea 1 como en el Metropolitano, en ubicaciones físicas diferentes. En el código se diferencian como `"Angamos (Linea 1)"` / `"Angamos (Metropolitano)"` y `"Veintiocho de Julio (Linea 1)"` / `"Veintiocho de Julio (Metropolitano)"` para no tratarlas como si fueran la misma estación.
 
 El dato de "tiene ascensor" por estación es ilustrativo, no verificado estación por estación contra una fuente oficial.
 
 ## Contenido de esta carpeta
 
-- `Lab03-MetroLima.playground` — implementación (rama `ai-assisted`, ver `PROMPTS.md`).
+- `Lab03-MetroLima.playground` — implementación oficial del lab (simulada, sin entrada real de consola porque el Playground no soporta `readLine()`).
+- `Lab03-MetroLima-Interactivo.swift` — misma lógica pero con menú **interactivo de verdad** (usa `readLine()`). Solo funciona corriéndolo en Terminal, no en el Playground:
+  ```bash
+  swift "Semana 03/Lab03-MetroLima-Interactivo.swift"
+  ```

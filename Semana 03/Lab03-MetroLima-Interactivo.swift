@@ -153,6 +153,41 @@ func verPuntosDeInteres(estacion: String) {
     }
 }
 
+// RF08: sugiere una ruta entre dos estaciones, indicando si hace falta trasbordo.
+func sugerirRuta(origen: String, destino: String) {
+    guard let infoOrigen = estaciones[origen] else {
+        print("Error: la estacion de origen \"\(origen)\" no existe")
+        return
+    }
+    guard let infoDestino = estaciones[destino] else {
+        print("Error: la estacion de destino \"\(destino)\" no existe")
+        return
+    }
+
+    let lineasComunes = Set(infoOrigen.lineas).intersection(infoDestino.lineas)
+    if let lineaComun = lineasComunes.first {
+        print("Ruta: \(origen) -> \(destino), directo por \(lineaComun). Sin trasbordo.")
+        return
+    }
+
+    for nombreEstacion in estaciones.keys.sorted() {
+        let info = estaciones[nombreEstacion]!
+        guard let conexion = info.conexion else { continue }
+
+        let compartenLineaConOrigen = !Set(info.lineas).isDisjoint(with: infoOrigen.lineas)
+        let conexionLlegaADestino = infoDestino.lineas.contains(conexion)
+        let compartenLineaConDestino = !Set(info.lineas).isDisjoint(with: infoDestino.lineas)
+        let conexionLlegaAOrigen = infoOrigen.lineas.contains(conexion)
+
+        if (compartenLineaConOrigen && conexionLlegaADestino) || (compartenLineaConDestino && conexionLlegaAOrigen) {
+            print("Ruta: \(origen) -> \(nombreEstacion) (trasbordo) -> \(destino).")
+            return
+        }
+    }
+
+    print("No se encontro una ruta directa ni con trasbordo conocido entre \(origen) y \(destino).")
+}
+
 // RF16: lista todas las estaciones disponibles, para no tener que memorizarlas.
 func listarTodasLasEstaciones() {
     print("Estaciones disponibles: \(estaciones.keys.sorted().joined(separator: ", "))")
@@ -288,7 +323,8 @@ func iniciarApp() {
         4. Ver lugares cercanos a una estacion
         5. Tarjeta de transporte (saldo, recarga, pasaje)
         6. Modo administrador
-        7. Salir
+        7. Sugerir ruta entre dos estaciones
+        8. Salir
         """)
         let opcion = pedirTexto("Elige una opcion")
         switch opcion {
@@ -326,6 +362,11 @@ func iniciarApp() {
         case "6":
             menuAdministrador()
         case "7":
+            listarTodasLasEstaciones() // Muestra las opciones para no tener que memorizarlas.
+            let origen = pedirTexto("Estacion de origen")
+            let destino = pedirTexto("Estacion de destino")
+            sugerirRuta(origen: origen, destino: destino)
+        case "8":
             continuar = false
             print("Hasta luego")
         default:

@@ -233,6 +233,47 @@ func verPuntosDeInteres(estacion: String) {
     }
 }
 
+// RF08: sugiere una ruta entre dos estaciones, indicando si hace falta trasbordo.
+func sugerirRuta(origen: String, destino: String) {
+    // Verificamos que ambas estaciones existan antes de intentar armar una ruta.
+    guard let infoOrigen = estaciones[origen] else {
+        print("Error: la estacion de origen \"\(origen)\" no existe")
+        return
+    }
+    guard let infoDestino = estaciones[destino] else {
+        print("Error: la estacion de destino \"\(destino)\" no existe")
+        return
+    }
+
+    // Si ambas estaciones comparten al menos una linea/sistema, se llega directo sin trasbordo.
+    let lineasComunes = Set(infoOrigen.lineas).intersection(infoDestino.lineas)
+    if let lineaComun = lineasComunes.first {
+        print("Ruta: \(origen) -> \(destino), directo por \(lineaComun). Sin trasbordo.")
+        return
+    }
+
+    // Si no comparten linea, buscamos una estacion intermodal que conecte ambos sistemas.
+    // Se recorre en orden alfabetico para que el resultado sea siempre el mismo.
+    for nombreEstacion in estaciones.keys.sorted() {
+        let info = estaciones[nombreEstacion]! // Sabemos que existe porque viene de las claves del diccionario.
+        guard let conexion = info.conexion else { continue } // Solo nos interesan las estaciones intermodales.
+
+        let compartenLineaConOrigen = !Set(info.lineas).isDisjoint(with: infoOrigen.lineas)
+        let conexionLlegaADestino = infoDestino.lineas.contains(conexion)
+        let compartenLineaConDestino = !Set(info.lineas).isDisjoint(with: infoDestino.lineas)
+        let conexionLlegaAOrigen = infoOrigen.lineas.contains(conexion)
+
+        // La estacion intermodal sirve como trasbordo si conecta el lado del origen con el del destino, o viceversa.
+        if (compartenLineaConOrigen && conexionLlegaADestino) || (compartenLineaConDestino && conexionLlegaAOrigen) {
+            print("Ruta: \(origen) -> \(nombreEstacion) (trasbordo) -> \(destino).")
+            return
+        }
+    }
+
+    // Si no se encontro ninguna conexion conocida entre los dos sistemas, se informa al usuario.
+    print("No se encontro una ruta directa ni con trasbordo conocido entre \(origen) y \(destino).")
+}
+
 // RF07: imprime el diseño del menu (no interactivo, el Playground no soporta readLine real).
 func mostrarMenu() {
     print("""
@@ -243,7 +284,8 @@ func mostrarMenu() {
     4. Ver lugares cercanos a una estacion
     5. Tarjeta de transporte (saldo, recarga, pasaje)
     6. Modo administrador
-    7. Salir
+    7. Sugerir ruta entre dos estaciones
+    8. Salir
     """)
 }
 
@@ -317,3 +359,12 @@ listarLineas()
 
 print("\n--- Verificando la estacion agregada ---")
 buscarEstacion(nombre: "Chorrillos")
+
+print("\n--- RF08: ruta directa, sin trasbordo (misma linea) ---")
+sugerirRuta(origen: "Miguel Grau", destino: "Bayovar")
+
+print("\n--- RF08: ruta con trasbordo (Linea 1 -> Metropolitano) ---")
+sugerirRuta(origen: "Miguel Grau", destino: "Estadio Nacional")
+
+print("\n--- RF08: sin ruta conocida entre sistemas (Linea 2 -> Linea 1) ---")
+sugerirRuta(origen: "Evitamiento", destino: "Miguel Grau")

@@ -91,3 +91,17 @@ Sí, fue directo porque ya existian los mismos lugares verificados en puntosDeIn
 
 ### ¿La IA usó algo que no conocías?
 No en este caso, fue una extension directa del mismo patron ya usado en destinosDeInteres.
+
+## RF08 - Sugerir ruta entre dos estaciones
+
+### Prompt (estructura CTRFE):
+CONTEXTO: El RF08 (sugerir una ruta entre dos estaciones, con trasbordo si aplica) estaba documentado en el README como bonus pero nunca se implemento en el codigo.
+TAREA: Implementalo usando los datos que ya existen: si ambas estaciones comparten una linea, la ruta es directa; si no, busca una estacion intermodal (la que tiene el campo "conexion" distinto de nil) que conecte la linea del origen con la del destino, en cualquiera de los dos sentidos; si no encuentra ninguna, informa que no hay ruta conocida.
+RESTRICCIONES: No inventar conexiones que no existan en los datos ya verificados (solo Atocongo y Nicolas Ayllon conectan Linea 1 con Metropolitano). Recorrer las estaciones en orden alfabetico para que el resultado sea siempre el mismo.
+FORMATO: Agregar la funcion al mismo estilo del archivo (Playground e interactivo), mas una opcion nueva en el menu.
+
+### ¿Funcionó a la primera?
+Sí, aunque hubo que probar a mano los 3 casos (misma linea, con trasbordo, y sin ruta conocida) para confirmar que la busqueda de la estacion intermodal funcionaba en ambos sentidos (origen->intermodal->destino y destino->intermodal->origen).
+
+### ¿La IA usó algo que no conocías?
+Sí, `Set(...).isDisjoint(with:)` para saber si dos arrays de lineas no tienen ningun elemento en comun. Lo investigué: es lo opuesto a que se intersecten — si NO son disjuntos, significa que comparten al menos un elemento.

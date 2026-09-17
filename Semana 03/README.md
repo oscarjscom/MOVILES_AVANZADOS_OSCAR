@@ -15,7 +15,7 @@ Sistema de consulta en consola sobre el Metro de Lima (Línea 1 y Línea 2) y el
 | RF05 | Buscar por destino de interés (ej. "Estadio Nacional del Peru", "Museo de la Nacion", "Emporio Comercial Gamarra", "Campo de Marte", "Real Plaza Atocongo") y sugerir la estación/sistema más cercano. |
 | RF06 | Manejar el caso de una estación que no existe, con mensaje de error claro. |
 | RF07 | Mostrar un menú de opciones: buscar estación, listar por línea, buscar por destino, salir. |
-| RF08 (bonus) | Sugerir una ruta entre dos estaciones (con trasbordo si aplica). |
+| RF08 | Sugerir una ruta entre dos estaciones: directa si comparten línea, con trasbordo si hay una estación intermodal que las conecte, o mensaje de "sin ruta conocida" si no hay conexión registrada entre los sistemas. |
 | RF09 | Consultar el saldo actual de la tarjeta de transporte. |
 | RF10 | Recargar saldo a la tarjeta, validando que el monto sea mayor a 0. |
 | RF11 | Cobrar el pasaje (tarifa fija) si hay saldo suficiente; mostrar error si no. |

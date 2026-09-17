@@ -54,13 +54,14 @@ func buscarEstacion(nombre: String) {
 // RF02: lista todas las estaciones que pertenecen a una linea o sistema dado.
 func listarPorLinea(linea: String) {
     // Filtramos el diccionario dejando solo las estaciones que contienen esa linea.
+    // OJO: filter sobre un diccionario devuelve un array de tuplas (key, value), no un diccionario.
     let resultado = estaciones.filter { $0.value.lineas.contains(linea) }
     if resultado.isEmpty {
         print("No se encontraron estaciones para \"\(linea)\"") // No hay coincidencias.
     } else {
         print("Estaciones de \(linea):")
         // Ordenamos alfabeticamente para que la salida sea consistente.
-        for nombre in resultado.keys.sorted() {
+        for nombre in resultado.map({ $0.key }).sorted() {
             print("- \(nombre)") // Imprime cada estacion encontrada.
         }
     }

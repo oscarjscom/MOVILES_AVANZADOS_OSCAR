@@ -16,6 +16,12 @@ Sistema de consulta en consola sobre el Metro de Lima (Línea 1 y Línea 2) y el
 | RF06 | Manejar el caso de una estación que no existe, con mensaje de error claro. |
 | RF07 | Mostrar un menú de opciones: buscar estación, listar por línea, buscar por destino, salir. |
 | RF08 (bonus) | Sugerir una ruta entre dos estaciones (con trasbordo si aplica). |
+| RF09 | Consultar el saldo actual de la tarjeta de transporte. |
+| RF10 | Recargar saldo a la tarjeta, validando que el monto sea mayor a 0. |
+| RF11 | Cobrar el pasaje (tarifa fija) si hay saldo suficiente; mostrar error si no. |
+| RF12 | Modo administrador: agregar una estación nueva a una línea (existente o nueva). |
+| RF13 | Modo administrador: crear una línea nueva vacía, sin estaciones todavía. |
+| RF14 | Modo administrador: listar todas las líneas/sistemas registrados. |
 
 ## Estructura de datos
 

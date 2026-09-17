@@ -20,3 +20,18 @@ Sí, filtrar un diccionario con `.filter { }` sobre sus pares clave-valor para l
 
 ## Nota
 El dato de "tiene ascensor" por estación es ilustrativo (no se encontró una fuente oficial estación por estación); las líneas, estados de operación y las conexiones intermodales Atocongo/Nicolás Ayllón sí están verificadas.
+
+## Tarjeta de transporte y modo administrador
+
+### Prompt (estructura CTRFE):
+CONTEXTO: Ya tengo la app de consulta de estaciones del Metro de Lima (struct InfoEstacion, diccionario estaciones, funciones buscarEstacion/listarPorLinea/buscarPorDestino).
+TAREA: Agrega una tarjeta de transporte que simule saldo, recarga y cobro de pasaje; y un modo administrador que permita agregar una estacion nueva a una linea existente o a una linea completamente nueva, crear una linea nueva vacia, y listar las lineas registradas.
+RESTRICCIONES: Mantener el mismo estilo del archivo (struct, diccionarios, funciones simples, comentario en cada linea). El diccionario de estaciones debe pasar de "let" a "var" porque el modo administrador necesita modificarlo. Simular todo con llamadas directas, sin readLine real.
+FORMATO: Agregar el codigo al mismo archivo Contents.swift, mas el diseño de un menu con la seccion de administracion.
+EJEMPLO: Poder agregar una estacion "Chorrillos" a la Linea 1 existente, y otra estacion a una linea nueva "Linea 4" que no existia antes.
+
+### ¿Funcionó a la primera?
+Sí. Se verificó a mano el orden de ejecución del Playground (de arriba hacia abajo) para confirmar que la lista de estaciones de la Línea 1 no incluyera todavía "Chorrillos" en la simulación de RF02, porque esa estación se agrega más adelante en el archivo.
+
+### ¿La IA usó algo que no conocías?
+Sí, usar un `Set<String>` (en vez de un array) para el registro de líneas existentes, y `Optional == nil` para revisar si una clave ya existe en el diccionario antes de agregarla. Lo investigué: `Set` evita duplicados automáticamente, y comparar contra `nil` es una forma corta de preguntar "¿ya existe esta clave?".

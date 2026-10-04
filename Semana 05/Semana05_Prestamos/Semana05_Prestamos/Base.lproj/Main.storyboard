@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<device id="retina6_12" orientation="portrait" appearance="light"/>
+<dependencies>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+<capability name="Safe area layout guides" minToolsVersion="9.0"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<scenes>
+<scene sceneID="k080-Gl-080">
+<objects>
+<viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+<view key="view" contentMode="scaleToFill" id="k068-Gl-068">
+<rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fill" alignment="fill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="k067-Gl-067">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculadora de Préstamos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k048-Gl-048">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="22"/>
+<color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<nil key="highlightedColor"/>
+</label><stackView opaque="NO" contentMode="scaleToFill" axis="horizontal" distribution="fill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k051-Gl-051">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital (S/.)" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k049-Gl-049">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+<constraints><constraint firstAttribute="width" constant="130" id="k050-Gl-050"/></constraints>
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k041-Gl-041">
+<rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+<fontDescription key="fontDescription" type="system" pointSize="14"/>
+<textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+</textField>
+</subviews>
+</stackView><stackView opaque="NO" contentMode="scaleToFill" axis="horizontal" distribution="fill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k054-Gl-054">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasa anual (%)" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k052-Gl-052">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+<constraints><constraint firstAttribute="width" constant="130" id="k053-Gl-053"/></constraints>
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="12" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k042-Gl-042">
+<rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+<fontDescription key="fontDescription" type="system" pointSize="14"/>
+<textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+</textField>
+</subviews>
+</stackView><stackView opaque="NO" contentMode="scaleToFill" axis="horizontal" distribution="fill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k057-Gl-057">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plazo (años)" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k055-Gl-055">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+<constraints><constraint firstAttribute="width" constant="130" id="k056-Gl-056"/></constraints>
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k043-Gl-043">
+<rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+<fontDescription key="fontDescription" type="system" pointSize="14"/>
+<textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+</textField>
+</subviews>
+</stackView><button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k058-Gl-058">
+<rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+<color key="backgroundColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<constraints><constraint firstAttribute="height" constant="44" id="k060-Gl-060"/></constraints>
+<fontDescription key="fontDescription" type="system" pointSize="17"/>
+<state key="normal" title="Calcular"><color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/></state>
+<connections><action selector="CalcularPrestamo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k059-Gl-059"/></connections>
+</button><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce los datos del préstamo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k047-Gl-047">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><stackView opaque="NO" contentMode="scaleToFill" axis="horizontal" distribution="fillEqually" alignment="fill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k062-Gl-062">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuota mensual" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k061-Gl-061">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="16"/>
+<color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<nil key="highlightedColor"/>
+</label><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S/. 0.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k044-Gl-044">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="16"/>
+<color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+</stackView><stackView opaque="NO" contentMode="scaleToFill" axis="horizontal" distribution="fillEqually" alignment="fill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k064-Gl-064">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intereses" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k063-Gl-063">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="16"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S/. 0.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k046-Gl-046">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="16"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+</stackView><stackView opaque="NO" contentMode="scaleToFill" axis="horizontal" distribution="fillEqually" alignment="fill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k066-Gl-066">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total a pagar" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k065-Gl-065">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S/. 0.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k045-Gl-045">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+</stackView>
+</subviews>
+</stackView>
+</subviews>
+<viewLayoutGuide key="safeArea" id="k069-Gl-069"/>
+<color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+<constraints>
+<constraint firstItem="k067-Gl-067" firstAttribute="top" secondItem="k069-Gl-069" secondAttribute="top" constant="40" id="k070-Gl-070"/><constraint firstItem="k067-Gl-067" firstAttribute="leading" secondItem="k069-Gl-069" secondAttribute="leading" constant="24" id="k071-Gl-071"/><constraint firstItem="k069-Gl-069" firstAttribute="trailing" secondItem="k067-Gl-067" secondAttribute="trailing" constant="24" id="k072-Gl-072"/>
+</constraints>
+</view>
+
+<connections><outlet property="capitalTextField" destination="k041-Gl-041" id="k073-Gl-073"/><outlet property="tasaTextField" destination="k042-Gl-042" id="k074-Gl-074"/><outlet property="plazoTextField" destination="k043-Gl-043" id="k075-Gl-075"/><outlet property="mensajeLabel" destination="k047-Gl-047" id="k076-Gl-076"/><outlet property="cuotaLabel" destination="k044-Gl-044" id="k077-Gl-077"/><outlet property="interesLabel" destination="k046-Gl-046" id="k078-Gl-078"/><outlet property="totalLabel" destination="k045-Gl-045" id="k079-Gl-079"/></connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="k081-Gl-081" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="0" y="0"/>
+</scene>
+</scenes>
+</document>

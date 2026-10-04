@@ -14,13 +14,13 @@
 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
 <subviews>
-<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diseño y Desarrollo de Software" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k001-Gl-001">
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DiseÃ±o y Desarrollo de Software" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k001-Gl-001">
 <rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
 
 <fontDescription key="fontDescription" type="system" pointSize="17"/>
 <color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 <nil key="highlightedColor"/>
-</label><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Docentes : Jaime Gomez - Juan León" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k002-Gl-002">
+</label><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Docentes : Jaime Gomez - Juan LeÃ³n" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k002-Gl-002">
 <rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
 <constraints><constraint firstAttribute="width" constant="260" id="k004-Gl-004"/></constraints>
 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
@@ -38,7 +38,7 @@
 <viewLayoutGuide key="safeArea" id="k008-Gl-008"/>
 <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
 <constraints>
-<constraint firstItem="k001-Gl-001" firstAttribute="centerX" secondItem="k008-Gl-008" secondAttribute="centerX" constant="0" id="k009-Gl-009"/><constraint firstItem="k001-Gl-001" firstAttribute="centerY" secondItem="k008-Gl-008" secondAttribute="centerY" constant="0" id="k010-Gl-010"/><constraint firstItem="k002-Gl-002" firstAttribute="top" secondItem="k001-Gl-001" secondAttribute="bottom" constant="120" id="k011-Gl-011"/><constraint firstItem="k002-Gl-002" firstAttribute="centerX" secondItem="k008-Gl-008" secondAttribute="centerX" constant="0" id="k012-Gl-012"/><constraint firstItem="k003-Gl-003" firstAttribute="top" secondItem="k002-Gl-002" secondAttribute="bottom" constant="30" id="k013-Gl-013"/><constraint firstItem="k003-Gl-003" firstAttribute="centerX" secondItem="k008-Gl-008" secondAttribute="centerX" constant="0" id="k014-Gl-014"/>
+<constraint firstItem="k001-Gl-001" firstAttribute="centerX" secondItem="k008-Gl-008" secondAttribute="centerX" constant="0" id="k009-Gl-009"/><constraint firstItem="k001-Gl-001" firstAttribute="centerY" secondItem="k008-Gl-008" secondAttribute="centerY" constant="0" id="k010-Gl-010"/><constraint firstItem="k002-Gl-002" firstAttribute="top" secondItem="k001-Gl-001" secondAttribute="bottom" constant="40" id="k011-Gl-011"/><constraint firstItem="k002-Gl-002" firstAttribute="centerX" secondItem="k008-Gl-008" secondAttribute="centerX" constant="0" id="k012-Gl-012"/><constraint firstItem="k003-Gl-003" firstAttribute="top" secondItem="k002-Gl-002" secondAttribute="bottom" constant="16" id="k013-Gl-013"/><constraint firstItem="k003-Gl-003" firstAttribute="centerX" secondItem="k008-Gl-008" secondAttribute="centerX" constant="0" id="k014-Gl-014"/>
 </constraints>
 </view>
 

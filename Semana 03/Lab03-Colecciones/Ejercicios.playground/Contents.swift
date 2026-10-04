@@ -162,3 +162,46 @@ do {
     let repetidos: Set = ["A", "B", "A", "C", "B"]
     print(repetidos.count)        // PREDICT 8: 3 (el Set elimina los duplicados)
 }
+
+// ===== EJERCICIO 4: COMBINACIÓN DE COLECCIONES =====
+do {
+    // ===== TODO 10: Inventario de productos =====
+    var precios: [String: Double] = [:]
+    var stocks: [String: Int] = [:]
+
+    print("¿Cuántos productos?")
+    let n = Int(readLine() ?? "") ?? 0
+    if n > 0 {                        // evita el rango inválido 1...0 si no se ingresa nada
+        for i in 1...n {
+            print("Producto \(i) - Nombre:")
+            let nombre = readLine() ?? ""
+            print("Precio:")
+            let precio = Double(readLine() ?? "") ?? 0
+            print("Stock:")
+            let stock = Int(readLine() ?? "") ?? 0
+            precios[nombre] = precio
+            stocks[nombre] = stock
+        }
+    }
+
+    // TODO: Calcular valor total (precio × stock)
+    var valorInventario = 0.0
+    for (nombre, precio) in precios {
+        let stock = stocks[nombre] ?? 0
+        valorInventario += precio * Double(stock)
+    }
+    print("Valor total del inventario: S/. \(valorInventario)")
+
+    // TODO: Mostrar productos con stock < 5
+    print("Productos con stock bajo (< 5):")
+    var hayStockBajo = false
+    for (nombre, stock) in stocks {
+        if stock < 5 {
+            print("- \(nombre): \(stock) unidades")
+            hayStockBajo = true
+        }
+    }
+    if !hayStockBajo {
+        print("Ninguno")
+    }
+}

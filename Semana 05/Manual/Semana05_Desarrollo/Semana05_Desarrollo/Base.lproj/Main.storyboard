@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<device id="retina6_12" orientation="portrait" appearance="light"/>
+<dependencies>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+<capability name="Safe area layout guides" minToolsVersion="9.0"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<scenes>
+<scene sceneID="k039-Gl-039">
+<objects>
+<viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+<view key="view" contentMode="scaleToFill" id="k031-Gl-031">
+<rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fill" alignment="fill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="k030-Gl-030">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calcular el IMC  de una Persona" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k020-Gl-020">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="20"/>
+<color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<nil key="highlightedColor"/>
+</label><stackView opaque="NO" contentMode="scaleToFill" axis="horizontal" distribution="fill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k023-Gl-023">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso (Kg)" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k021-Gl-021">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+<constraints><constraint firstAttribute="width" constant="90" id="k022-Gl-022"/></constraints>
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="kg" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k017-Gl-017">
+<rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+<fontDescription key="fontDescription" type="system" pointSize="14"/>
+<textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+</textField>
+</subviews>
+</stackView><stackView opaque="NO" contentMode="scaleToFill" axis="horizontal" distribution="fill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k026-Gl-026">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altura(m)" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k024-Gl-024">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+<constraints><constraint firstAttribute="width" constant="90" id="k025-Gl-025"/></constraints>
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="m" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k018-Gl-018">
+<rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+<fontDescription key="fontDescription" type="system" pointSize="14"/>
+<textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+</textField>
+</subviews>
+</stackView><button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k027-Gl-027">
+<rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+
+
+<fontDescription key="fontDescription" type="system" pointSize="17"/>
+<state key="normal" title="Mostrar"></state>
+<connections><action selector="CalcularResultado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k028-Gl-028"/></connections>
+</button><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado IMC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k029-Gl-029">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="16"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mostrar Resultado" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k019-Gl-019">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="20"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+</stackView>
+</subviews>
+<viewLayoutGuide key="safeArea" id="k032-Gl-032"/>
+<color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+<constraints>
+<constraint firstItem="k030-Gl-030" firstAttribute="top" secondItem="k032-Gl-032" secondAttribute="top" constant="60" id="k033-Gl-033"/><constraint firstItem="k030-Gl-030" firstAttribute="leading" secondItem="k032-Gl-032" secondAttribute="leading" constant="24" id="k034-Gl-034"/><constraint firstItem="k032-Gl-032" firstAttribute="trailing" secondItem="k030-Gl-030" secondAttribute="trailing" constant="24" id="k035-Gl-035"/>
+</constraints>
+</view>
+
+<connections><outlet property="weightTextField" destination="k017-Gl-017" id="k036-Gl-036"/><outlet property="heightTextField" destination="k018-Gl-018" id="k037-Gl-037"/><outlet property="resultLabel" destination="k019-Gl-019" id="k038-Gl-038"/></connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="k040-Gl-040" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="0" y="0"/>
+</scene>
+</scenes>
+</document>

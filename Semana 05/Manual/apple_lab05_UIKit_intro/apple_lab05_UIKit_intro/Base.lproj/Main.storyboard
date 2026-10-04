@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<device id="retina6_12" orientation="portrait" appearance="light"/>
+<dependencies>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+<capability name="Safe area layout guides" minToolsVersion="9.0"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<scenes>
+<scene sceneID="k015-Gl-015">
+<objects>
+<viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+<view key="view" contentMode="scaleToFill" id="k007-Gl-007">
+<rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diseño y Desarrollo de Software" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k001-Gl-001">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="17"/>
+<color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<nil key="highlightedColor"/>
+</label><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Docentes : Jaime Gomez - Juan León" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k002-Gl-002">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+<constraints><constraint firstAttribute="width" constant="260" id="k004-Gl-004"/></constraints>
+<fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oscar Olano" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k003-Gl-003">
+<rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+<color key="backgroundColor" red="1" green="0.85" blue="0.35" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<constraints><constraint firstAttribute="width" constant="280" id="k005-Gl-005"/><constraint firstAttribute="height" constant="50" id="k006-Gl-006"/></constraints>
+<fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+<viewLayoutGuide key="safeArea" id="k008-Gl-008"/>
+<color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+<constraints>
+<constraint firstItem="k001-Gl-001" firstAttribute="centerX" secondItem="k008-Gl-008" secondAttribute="centerX" constant="0" id="k009-Gl-009"/><constraint firstItem="k001-Gl-001" firstAttribute="centerY" secondItem="k008-Gl-008" secondAttribute="centerY" constant="0" id="k010-Gl-010"/><constraint firstItem="k002-Gl-002" firstAttribute="top" secondItem="k001-Gl-001" secondAttribute="bottom" constant="40" id="k011-Gl-011"/><constraint firstItem="k002-Gl-002" firstAttribute="centerX" secondItem="k008-Gl-008" secondAttribute="centerX" constant="0" id="k012-Gl-012"/><constraint firstItem="k003-Gl-003" firstAttribute="top" secondItem="k002-Gl-002" secondAttribute="bottom" constant="16" id="k013-Gl-013"/><constraint firstItem="k003-Gl-003" firstAttribute="centerX" secondItem="k008-Gl-008" secondAttribute="centerX" constant="0" id="k014-Gl-014"/>
+</constraints>
+</view>
+
+
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="k016-Gl-016" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="0" y="0"/>
+</scene>
+</scenes>
+</document>

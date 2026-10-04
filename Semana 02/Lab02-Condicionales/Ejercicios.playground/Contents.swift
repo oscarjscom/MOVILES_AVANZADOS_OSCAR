@@ -233,3 +233,71 @@ do {
     print(texto)      // PREDICT 7: "Hola Hola Hola "
     // El _ se usa cuando NO necesitamos el número de la vuelta: solo repetir 3 veces.
 }
+
+// ===== EJERCICIO 4: WHILE =====
+do {
+    // --- Ejemplo (ya resuelto): ---
+    var contador = 5
+    while contador > 0 {
+        print("Cuenta regresiva: \(contador)")
+        contador -= 1
+    }
+    print("¡Despegue!")
+
+    // --- TODO 11: Ahorro mensual ---
+    var ahorro = 0.0
+    var meses = 0
+    let meta = 2000.0
+    let ahorroMensual = 150.0
+    while ahorro < meta {
+        ahorro += ahorroMensual
+        meses += 1
+    }
+    print("Necesita \(meses) meses para juntar S/. \(meta)")   // 14 meses
+
+    // --- TODO 12: División sucesiva ---
+    var numero = 1000.0
+    var divisiones = 0
+    while numero >= 1 {
+        numero = numero / 2
+        divisiones += 1
+        print("División \(divisiones): \(numero)")
+    }
+    print("Se dividió \(divisiones) veces")                    // 10 veces
+
+    // --- TODO 13: Validar datos con repeat-while ---
+    let intento1 = 25   // Inválido: > 20
+    let intento2 = -3   // Inválido: < 0
+    let intento3 = 15   // Válido
+
+    var intentoActual = intento1
+    var esValido = false
+    var numIntento = 1
+
+    repeat {
+        if intentoActual >= 0 && intentoActual <= 20 {
+            esValido = true
+            print("Nota \(intentoActual) válida en intento \(numIntento)")
+        } else {
+            print("Nota \(intentoActual) inválida, intento \(numIntento)")
+            if numIntento == 1 { intentoActual = intento2 }
+            if numIntento == 2 { intentoActual = intento3 }
+            numIntento += 1
+        }
+    } while !esValido
+
+    // ===== PREDICT =====
+    var a = 100
+    while a > 1 {
+        a = a / 3
+    }
+    print(a)          // PREDICT 8: valor final 1, 4 vueltas (100 → 33 → 11 → 3 → 1, división entera)
+
+    var b = 0
+    repeat {
+        b += 1
+    } while b < 0
+    print(b)          // PREDICT 9: 1
+    // repeat-while revisa la condición AL FINAL, por eso el bloque se ejecuta
+    // al menos una vez aunque la condición sea falsa desde el inicio.
+}

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k029-Gl-029">
+<device id="retina6_12" orientation="portrait" appearance="light"/>
+<dependencies>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+<capability name="Safe area layout guides" minToolsVersion="9.0"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<scenes>
+<scene sceneID="k085-Gl-085">
+<objects>
+<navigationController automaticallyAdjustsScrollViewInsets="NO" id="k029-Gl-029" sceneMemberID="viewController">
+<toolbarItems/>
+<navigationBar key="navigationBar" contentMode="scaleToFill" id="k086-Gl-086">
+<rect key="frame" x="0.0" y="47" width="390" height="44"/>
+<autoresizingMask key="autoresizingMask"/>
+</navigationBar>
+<nil name="viewControllers"/>
+<connections>
+<segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="k087-Gl-087"/>
+</connections>
+</navigationController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="k088-Gl-088" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="-450" y="0"/>
+</scene><scene sceneID="k059-Gl-059">
+<objects>
+<viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+<view key="view" contentMode="scaleToFill" id="k051-Gl-051">
+<rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fill" alignment="fill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="k049-Gl-049">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATOS DEL CLIENTE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k036-Gl-036">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="22"/>
+<color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<nil key="highlightedColor"/>
+</label><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por favor ingresa los siguientes datos:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k037-Gl-037">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><stackView opaque="NO" contentMode="scaleToFill" axis="horizontal" distribution="fill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k040-Gl-040">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellidos :" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k038-Gl-038">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+<constraints><constraint firstAttribute="width" constant="90" id="k039-Gl-039"/></constraints>
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellidos" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k030-Gl-030">
+<rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+<fontDescription key="fontDescription" type="system" pointSize="14"/>
+<textInputTraits key="textInputTraits"/>
+</textField>
+</subviews>
+</stackView><stackView opaque="NO" contentMode="scaleToFill" axis="horizontal" distribution="fill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k043-Gl-043">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombres :" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k041-Gl-041">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+<constraints><constraint firstAttribute="width" constant="90" id="k042-Gl-042"/></constraints>
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombres" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k031-Gl-031">
+<rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+<fontDescription key="fontDescription" type="system" pointSize="14"/>
+<textInputTraits key="textInputTraits"/>
+</textField>
+</subviews>
+</stackView><stackView opaque="NO" contentMode="scaleToFill" axis="horizontal" distribution="fill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k046-Gl-046">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DNI :" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k044-Gl-044">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+<constraints><constraint firstAttribute="width" constant="90" id="k045-Gl-045"/></constraints>
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DNI" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k032-Gl-032">
+<rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+<fontDescription key="fontDescription" type="system" pointSize="14"/>
+<textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+</textField>
+</subviews>
+</stackView><button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k047-Gl-047">
+<rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+
+
+<fontDescription key="fontDescription" type="system" pointSize="17"/>
+<state key="normal" title="Continuar"></state>
+<connections><action selector="btnContinuar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k048-Gl-048"/></connections>
+</button>
+</subviews>
+</stackView>
+</subviews>
+<viewLayoutGuide key="safeArea" id="k052-Gl-052"/>
+<color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+<constraints>
+<constraint firstItem="k049-Gl-049" firstAttribute="top" secondItem="k052-Gl-052" secondAttribute="top" constant="40" id="k053-Gl-053"/><constraint firstItem="k049-Gl-049" firstAttribute="leading" secondItem="k052-Gl-052" secondAttribute="leading" constant="24" id="k054-Gl-054"/><constraint firstItem="k052-Gl-052" firstAttribute="trailing" secondItem="k049-Gl-049" secondAttribute="trailing" constant="24" id="k055-Gl-055"/>
+</constraints>
+</view>
+<navigationItem key="navigationItem" id="k050-Gl-050"/>
+<connections><outlet property="tfApellido" destination="k030-Gl-030" id="k056-Gl-056"/><outlet property="tfNombre" destination="k031-Gl-031" id="k057-Gl-057"/><outlet property="tfDni" destination="k032-Gl-032" id="k058-Gl-058"/></connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="k060-Gl-060" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="0" y="0"/>
+</scene><scene sceneID="k083-Gl-083">
+<objects>
+<viewController storyboardIdentifier="ViewControllerConfirmacion" id="k028-Gl-028" customClass="ViewControllerConfirmacion" customModuleProvider="target" sceneMemberID="viewController">
+<view key="view" contentMode="scaleToFill" id="k075-Gl-075">
+<rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fill" alignment="fill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="k074-Gl-074">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATOS INGRESADOS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k061-Gl-061">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="22"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datos del cliente que fueron ingresados" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k062-Gl-062">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><stackView opaque="NO" contentMode="scaleToFill" axis="horizontal" distribution="fill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k065-Gl-065">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellidos :" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k063-Gl-063">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+<constraints><constraint firstAttribute="width" constant="90" id="k064-Gl-064"/></constraints>
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k033-Gl-033">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+</stackView><stackView opaque="NO" contentMode="scaleToFill" axis="horizontal" distribution="fill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k068-Gl-068">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombres :" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k066-Gl-066">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+<constraints><constraint firstAttribute="width" constant="90" id="k067-Gl-067"/></constraints>
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k034-Gl-034">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+</stackView><stackView opaque="NO" contentMode="scaleToFill" axis="horizontal" distribution="fill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k071-Gl-071">
+<rect key="frame" x="24" y="100" width="345" height="300"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DNI :" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k069-Gl-069">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+<constraints><constraint firstAttribute="width" constant="90" id="k070-Gl-070"/></constraints>
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k035-Gl-035">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+</stackView><button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k072-Gl-072">
+<rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+
+
+<fontDescription key="fontDescription" type="system" pointSize="17"/>
+<state key="normal" title="Volver"></state>
+<connections><action selector="btnVolver:" destination="k028-Gl-028" eventType="touchUpInside" id="k073-Gl-073"/></connections>
+</button>
+</subviews>
+</stackView>
+</subviews>
+<viewLayoutGuide key="safeArea" id="k076-Gl-076"/>
+<color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+<constraints>
+<constraint firstItem="k074-Gl-074" firstAttribute="top" secondItem="k076-Gl-076" secondAttribute="top" constant="60" id="k077-Gl-077"/><constraint firstItem="k074-Gl-074" firstAttribute="leading" secondItem="k076-Gl-076" secondAttribute="leading" constant="24" id="k078-Gl-078"/><constraint firstItem="k076-Gl-076" firstAttribute="trailing" secondItem="k074-Gl-074" secondAttribute="trailing" constant="24" id="k079-Gl-079"/>
+</constraints>
+</view>
+
+<connections><outlet property="tfApellido" destination="k033-Gl-033" id="k080-Gl-080"/><outlet property="tfNombre" destination="k034-Gl-034" id="k081-Gl-081"/><outlet property="tfDni" destination="k035-Gl-035" id="k082-Gl-082"/></connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="k084-Gl-084" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="450" y="0"/>
+</scene>
+</scenes>
+</document>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k002-Gl-002">
+<device id="retina6_12" orientation="portrait" appearance="light"/>
+<dependencies>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+<capability name="Safe area layout guides" minToolsVersion="9.0"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<scenes>
+<scene sceneID="k024-Gl-024">
+<objects>
+<navigationController automaticallyAdjustsScrollViewInsets="NO" id="k002-Gl-002" sceneMemberID="viewController">
+<toolbarItems/>
+<navigationBar key="navigationBar" contentMode="scaleToFill" id="k025-Gl-025">
+<rect key="frame" x="0.0" y="47" width="390" height="44"/>
+<autoresizingMask key="autoresizingMask"/>
+</navigationBar>
+<nil name="viewControllers"/>
+<connections>
+<segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="k026-Gl-026"/>
+</connections>
+</navigationController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="k027-Gl-027" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="-450" y="0"/>
+</scene><scene sceneID="k015-Gl-015">
+<objects>
+<viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+<view key="view" contentMode="scaleToFill" id="k009-Gl-009">
+<rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PANTALLA 01" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k003-Gl-003">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="24"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desarrollado por: Oscar Olano" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k004-Gl-004">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="12"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+<viewLayoutGuide key="safeArea" id="k010-Gl-010"/>
+<color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+<constraints>
+<constraint firstItem="k003-Gl-003" firstAttribute="centerX" secondItem="k009-Gl-009" secondAttribute="centerX" constant="0" id="k011-Gl-011"/><constraint firstItem="k003-Gl-003" firstAttribute="centerY" secondItem="k009-Gl-009" secondAttribute="centerY" constant="0" id="k012-Gl-012"/><constraint firstItem="k004-Gl-004" firstAttribute="centerX" secondItem="k009-Gl-009" secondAttribute="centerX" constant="0" id="k013-Gl-013"/><constraint firstItem="k010-Gl-010" firstAttribute="bottom" secondItem="k004-Gl-004" secondAttribute="bottom" constant="16" id="k014-Gl-014"/>
+</constraints>
+</view>
+<navigationItem key="navigationItem" title="Pantalla 1" id="k006-Gl-006">
+<barButtonItem key="rightBarButtonItem" title="A Pantalla 2" id="k007-Gl-007">
+<connections><segue destination="k001-Gl-001" kind="show" id="k008-Gl-008"/></connections>
+</barButtonItem>
+</navigationItem>
+
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="k016-Gl-016" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="0" y="0"/>
+</scene><scene sceneID="k022-Gl-022">
+<objects>
+<viewController id="k001-Gl-001" customClass="ViewController2" customModuleProvider="target" sceneMemberID="viewController">
+<view key="view" contentMode="scaleToFill" id="k018-Gl-018">
+<rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PANTALLA 02" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k005-Gl-005">
+<rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+
+<fontDescription key="fontDescription" type="system" pointSize="24"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+<viewLayoutGuide key="safeArea" id="k019-Gl-019"/>
+<color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+<constraints>
+<constraint firstItem="k005-Gl-005" firstAttribute="centerX" secondItem="k018-Gl-018" secondAttribute="centerX" constant="0" id="k020-Gl-020"/><constraint firstItem="k005-Gl-005" firstAttribute="centerY" secondItem="k018-Gl-018" secondAttribute="centerY" constant="0" id="k021-Gl-021"/>
+</constraints>
+</view>
+<navigationItem key="navigationItem" title="Pantalla 2" id="k017-Gl-017"/>
+
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="k023-Gl-023" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="450" y="0"/>
+</scene>
+</scenes>
+</document>

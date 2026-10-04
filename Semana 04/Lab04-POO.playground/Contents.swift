@@ -126,3 +126,82 @@ print(misteriosa.descuento())     // PREDICT 6: 0.1. Aunque la variable es de ti
                                   // es SucursalLima y Swift ejecuta su override en tiempo de ejecución.
 let monto = 2000.0 * (1 - misteriosa.descuento())
 print(misteriosa.costoEnvio(monto: monto))   // PREDICT 7: 0.0 (monto = 1800, Lima da envío gratis desde 1500)
+
+// ===== CASO 2 — PARTE A: BIBLIOTECA (SIN IA) =====
+
+enum EstadoLibro {
+    case disponible
+    case prestado
+}
+
+struct Libro {
+    var titulo: String
+    var autor: String
+    var estado: EstadoLibro = .disponible
+}
+
+class Biblioteca {
+    var libros: [Libro] = []
+
+    func agregar(libro: Libro) {
+        libros.append(libro)
+    }
+
+    func prestar(titulo: String) -> Bool {
+        for i in 0..<libros.count {
+            if libros[i].titulo == titulo {
+                if libros[i].estado == .disponible {
+                    libros[i].estado = .prestado      // se edita el struct dentro del array, no una copia
+                    print("Préstamo aprobado: \(titulo)")
+                    return true
+                } else {
+                    print("Error: \(titulo) ya está prestado")
+                    return false
+                }
+            }
+        }
+        print("Error: no existe \(titulo)")
+        return false
+    }
+
+    func devolver(titulo: String) -> Bool {
+        for i in 0..<libros.count {
+            if libros[i].titulo == titulo {
+                if libros[i].estado == .prestado {
+                    libros[i].estado = .disponible
+                    print("Devolución registrada: \(titulo)")
+                    return true
+                } else {
+                    print("Error: \(titulo) no estaba prestado")
+                    return false
+                }
+            }
+        }
+        print("Error: no existe \(titulo)")
+        return false
+    }
+
+    func inventario() {
+        print("===== INVENTARIO =====")
+        for libro in libros {
+            var textoEstado = ""
+            switch libro.estado {
+            case .disponible: textoEstado = "disponible"
+            case .prestado:   textoEstado = "prestado"
+            }
+            print("\(libro.titulo) (\(libro.autor)) - \(textoEstado)")
+        }
+    }
+}
+
+let biblioteca = Biblioteca()
+biblioteca.agregar(libro: Libro(titulo: "Cien años de soledad", autor: "Gabriel García Márquez"))
+biblioteca.agregar(libro: Libro(titulo: "La ciudad y los perros", autor: "Mario Vargas Llosa"))
+biblioteca.agregar(libro: Libro(titulo: "El Quijote", autor: "Miguel de Cervantes"))
+
+_ = biblioteca.prestar(titulo: "La ciudad y los perros")
+_ = biblioteca.prestar(titulo: "La ciudad y los perros")
+_ = biblioteca.devolver(titulo: "La ciudad y los perros")
+_ = biblioteca.prestar(titulo: "El Quijote")
+_ = biblioteca.prestar(titulo: "El Principito")
+biblioteca.inventario()

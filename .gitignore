@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+# Xcode
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+*.moved-aside
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Archivos privados
+.env
+.env.*
+*.pem
+*.p12
+*.key

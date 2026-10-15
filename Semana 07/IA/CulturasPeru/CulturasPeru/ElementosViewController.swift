@@ -41,4 +41,14 @@ class ElementosViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mostrarDetalle",
+           let celda = sender as? UITableViewCell,
+           let indexPath = tablaElementos.indexPath(for: celda),
+           let destino = segue.destination as? DetalleElementoViewController {
+            destino.elemento = cultura?.elementos[indexPath.row]
+            destino.nombreCultura = cultura?.nombre
+        }
+    }
 }

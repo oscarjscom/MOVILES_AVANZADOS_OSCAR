@@ -18,6 +18,7 @@
 		0E5F1AB4E25CD85C7C9DAD35 /* CulturasPeruUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F3E0974487240865C7E2BE /* CulturasPeruUITestsLaunchTests.swift */; };
 		1956DBE8FFB7EC0535D2E164 /* ElementosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D314DABCAF39C0EEBB4E4E5 /* ElementosViewController.swift */; };
 		77AFD2FA7E49C9D5B74AB84D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC7C948577692AD7B84EFA7 /* Main.storyboard */; };
+		A85724F49DAB10CC43142AC7 /* DetalleElementoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B26A821648BFCA202FC6C /* DetalleElementoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		E1F3E0974487240865C7E2BE /* CulturasPeruUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturasPeruUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7D314DABCAF39C0EEBB4E4E5 /* ElementosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementosViewController.swift; sourceTree = "<group>"; };
 		B2982A9CEDB935786519B223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC5B26A821648BFCA202FC6C /* DetalleElementoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleElementoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				71E389BA2FA285E833954656 /* SceneDelegate.swift */,
 				B437DF1A26E66FB9BA2E753C /* ViewController.swift */,
 				AACCDBE5E73C233241ED5C54 /* Cultura.swift */,
+				AC5B26A821648BFCA202FC6C /* DetalleElementoViewController.swift */,
 				4CC7C948577692AD7B84EFA7 /* Main.storyboard */,
 				7D314DABCAF39C0EEBB4E4E5 /* ElementosViewController.swift */,
 				C2963BB27E896D2A3B4F7D8A /* Assets.xcassets */,
@@ -266,6 +269,7 @@
 			files = (
 				6D71B5B42D7A1B03B3894AA6 /* ViewController.swift in Sources */,
 				4AA1781AC46E3163C9C1680C /* Cultura.swift in Sources */,
+				A85724F49DAB10CC43142AC7 /* DetalleElementoViewController.swift in Sources */,
 				1956DBE8FFB7EC0535D2E164 /* ElementosViewController.swift in Sources */,
 				FA71ED9DF85E2FE73A626ECC /* AppDelegate.swift in Sources */,
 				7756BC64E612FE97DD82765F /* SceneDelegate.swift in Sources */,

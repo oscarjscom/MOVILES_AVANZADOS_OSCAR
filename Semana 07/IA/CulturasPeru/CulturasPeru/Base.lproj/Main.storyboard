@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c01-Pe-001">
+<device id="retina6_12" orientation="portrait" appearance="light"/>
+<dependencies>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+<capability name="Safe area layout guides" minToolsVersion="9.0"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<scenes>
+<scene sceneID="c59-Pe-059">
+<objects>
+<navigationController automaticallyAdjustsScrollViewInsets="NO" id="c01-Pe-001" sceneMemberID="viewController">
+<toolbarItems/>
+<navigationBar key="navigationBar" contentMode="scaleToFill" id="c60-Pe-060">
+<rect key="frame" x="0.0" y="59" width="393" height="44"/>
+<autoresizingMask key="autoresizingMask"/>
+</navigationBar>
+<nil name="viewControllers"/>
+<connections>
+<segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="c61-Pe-061"/>
+</connections>
+</navigationController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="c62-Pe-062" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="-450" y="0.0"/>
+</scene>
+<scene sceneID="c28-Pe-028">
+<objects>
+<viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+<view key="view" contentMode="scaleToFill" id="c24-Pe-024">
+<rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c04-Pe-004">
+<rect key="frame" x="0.0" y="103" width="393" height="749"/>
+<color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+<prototypes>
+<tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="celdaCultura" rowHeight="88" id="c08-Pe-008" customClass="CulturaCell" customModuleProvider="target">
+<rect key="frame" x="0.0" y="50" width="393" height="88"/>
+<autoresizingMask key="autoresizingMask"/>
+<tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c08-Pe-008" id="c11-Pe-011">
+<rect key="frame" x="0.0" y="0.0" width="363" height="88"/>
+<autoresizingMask key="autoresizingMask"/>
+<subviews>
+<imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c05-Pe-005">
+<rect key="frame" x="16" y="12" width="64" height="64"/>
+<constraints><constraint firstAttribute="width" constant="64" id="c09-Pe-009"/><constraint firstAttribute="height" constant="64" id="c10-Pe-010"/></constraints>
+<userDefinedRuntimeAttributes>
+<userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius"><integer key="value" value="10"/></userDefinedRuntimeAttribute>
+</userDefinedRuntimeAttributes>
+</imageView><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cultura" lineBreakMode="tailTruncation" numberOfLines="1" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c06-Pe-006">
+<rect key="frame" x="96" y="20" width="240" height="21"/>
+<fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" lineBreakMode="tailTruncation" numberOfLines="1" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c07-Pe-007">
+<rect key="frame" x="96" y="20" width="240" height="21"/>
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<color key="textColor" red="0.42" green="0.42" blue="0.45" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+<constraints>
+<constraint firstItem="c05-Pe-005" firstAttribute="leading" secondItem="c11-Pe-011" secondAttribute="leading" constant="16" id="c16-Pe-016"/><constraint firstItem="c05-Pe-005" firstAttribute="centerY" secondItem="c11-Pe-011" secondAttribute="centerY" constant="0" id="c17-Pe-017"/><constraint firstItem="c06-Pe-006" firstAttribute="leading" secondItem="c05-Pe-005" secondAttribute="trailing" constant="14" id="c18-Pe-018"/><constraint firstItem="c11-Pe-011" firstAttribute="trailing" secondItem="c06-Pe-006" secondAttribute="trailing" constant="8" id="c19-Pe-019"/><constraint firstItem="c06-Pe-006" firstAttribute="bottom" secondItem="c11-Pe-011" secondAttribute="centerY" constant="-2" id="c20-Pe-020"/><constraint firstItem="c07-Pe-007" firstAttribute="leading" secondItem="c06-Pe-006" secondAttribute="leading" constant="0" id="c21-Pe-021"/><constraint firstItem="c07-Pe-007" firstAttribute="trailing" secondItem="c06-Pe-006" secondAttribute="trailing" constant="0" id="c22-Pe-022"/><constraint firstItem="c07-Pe-007" firstAttribute="top" secondItem="c11-Pe-011" secondAttribute="centerY" constant="4" id="c23-Pe-023"/>
+</constraints>
+</tableViewCellContentView>
+<connections><outlet property="imgCultura" destination="c05-Pe-005" id="c12-Pe-012"/><outlet property="lblNombre" destination="c06-Pe-006" id="c13-Pe-013"/><outlet property="lblRegion" destination="c07-Pe-007" id="c14-Pe-014"/><segue destination="c02-Pe-002" kind="show" identifier="mostrarElementos" id="c15-Pe-015"/></connections>
+</tableViewCell>
+</prototypes>
+</tableView>
+</subviews>
+<viewLayoutGuide key="safeArea" id="c25-Pe-025"/>
+<color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+<constraints>
+<constraint firstItem="c04-Pe-004" firstAttribute="top" secondItem="c25-Pe-025" secondAttribute="top" constant="0" id="c29-Pe-029"/><constraint firstItem="c04-Pe-004" firstAttribute="leading" secondItem="c25-Pe-025" secondAttribute="leading" constant="0" id="c30-Pe-030"/><constraint firstItem="c25-Pe-025" firstAttribute="trailing" secondItem="c04-Pe-004" secondAttribute="trailing" constant="0" id="c31-Pe-031"/><constraint firstItem="c04-Pe-004" firstAttribute="bottom" secondItem="c24-Pe-024" secondAttribute="bottom" constant="0" id="c32-Pe-032"/>
+</constraints>
+</view>
+<navigationItem key="navigationItem" title="Culturas Peruanas" id="c27-Pe-027"/>
+<connections><outlet property="tablaCulturas" destination="c04-Pe-004" id="c26-Pe-026"/></connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="c33-Pe-033" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="0" y="0.0"/>
+</scene><scene sceneID="c53-Pe-053">
+<objects>
+<viewController id="c02-Pe-002" customClass="ElementosViewController" customModuleProvider="target" sceneMemberID="viewController">
+<view key="view" contentMode="scaleToFill" id="c49-Pe-049">
+<rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c34-Pe-034">
+<rect key="frame" x="0.0" y="103" width="393" height="749"/>
+<color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+<prototypes>
+<tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="celdaElemento" rowHeight="88" id="c37-Pe-037" customClass="ElementoCell" customModuleProvider="target">
+<rect key="frame" x="0.0" y="50" width="393" height="88"/>
+<autoresizingMask key="autoresizingMask"/>
+<tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c37-Pe-037" id="c40-Pe-040">
+<rect key="frame" x="0.0" y="0.0" width="363" height="88"/>
+<autoresizingMask key="autoresizingMask"/>
+<subviews>
+<imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c35-Pe-035">
+<rect key="frame" x="16" y="12" width="64" height="64"/>
+<constraints><constraint firstAttribute="width" constant="64" id="c38-Pe-038"/><constraint firstAttribute="height" constant="64" id="c39-Pe-039"/></constraints>
+<userDefinedRuntimeAttributes>
+<userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius"><integer key="value" value="10"/></userDefinedRuntimeAttribute>
+</userDefinedRuntimeAttributes>
+</imageView><label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c36-Pe-036">
+<rect key="frame" x="96" y="20" width="240" height="21"/>
+<fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+<constraints>
+<constraint firstItem="c35-Pe-035" firstAttribute="leading" secondItem="c40-Pe-040" secondAttribute="leading" constant="16" id="c44-Pe-044"/><constraint firstItem="c35-Pe-035" firstAttribute="centerY" secondItem="c40-Pe-040" secondAttribute="centerY" constant="0" id="c45-Pe-045"/><constraint firstItem="c36-Pe-036" firstAttribute="leading" secondItem="c35-Pe-035" secondAttribute="trailing" constant="14" id="c46-Pe-046"/><constraint firstItem="c40-Pe-040" firstAttribute="trailing" secondItem="c36-Pe-036" secondAttribute="trailing" constant="8" id="c47-Pe-047"/><constraint firstItem="c36-Pe-036" firstAttribute="centerY" secondItem="c40-Pe-040" secondAttribute="centerY" constant="0" id="c48-Pe-048"/>
+</constraints>
+</tableViewCellContentView>
+<connections><outlet property="imgElemento" destination="c35-Pe-035" id="c41-Pe-041"/><outlet property="lblTitulo" destination="c36-Pe-036" id="c42-Pe-042"/></connections>
+</tableViewCell>
+</prototypes>
+</tableView>
+</subviews>
+<viewLayoutGuide key="safeArea" id="c50-Pe-050"/>
+<color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+<constraints>
+<constraint firstItem="c34-Pe-034" firstAttribute="top" secondItem="c50-Pe-050" secondAttribute="top" constant="0" id="c54-Pe-054"/><constraint firstItem="c34-Pe-034" firstAttribute="leading" secondItem="c50-Pe-050" secondAttribute="leading" constant="0" id="c55-Pe-055"/><constraint firstItem="c50-Pe-050" firstAttribute="trailing" secondItem="c34-Pe-034" secondAttribute="trailing" constant="0" id="c56-Pe-056"/><constraint firstItem="c34-Pe-034" firstAttribute="bottom" secondItem="c49-Pe-049" secondAttribute="bottom" constant="0" id="c57-Pe-057"/>
+</constraints>
+</view>
+<navigationItem key="navigationItem" id="c52-Pe-052"/>
+<connections><outlet property="tablaElementos" destination="c34-Pe-034" id="c51-Pe-051"/></connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="c58-Pe-058" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="450" y="0.0"/>
+</scene>
+</scenes>
+</document>

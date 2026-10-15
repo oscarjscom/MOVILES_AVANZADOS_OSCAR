@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "sipan.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

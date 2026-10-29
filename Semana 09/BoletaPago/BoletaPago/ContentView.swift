@@ -29,8 +29,7 @@ struct ContentView: View {
                         .foregroundColor(.red)
                 }
                 if let boleta = boleta {
-                    Text("NETO A PAGAR: S/ \(formatoMonto(boleta.netoAPagar))")
-                        .bold()
+                    BoletaView(boleta: boleta)
                 }
             }
             .padding()
@@ -126,5 +125,57 @@ struct ContentView: View {
             horasExtras35: horas35,
             adelantos: adelanto
         ))
+    }
+}
+
+struct BoletaView: View {
+    let boleta: Boleta
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            VStack(alignment: .leading, spacing: 6) {
+                Text("REMUNERACIONES")
+                    .font(.caption)
+                    .bold()
+                fila(boleta.remuneraciones[0])
+                fila(boleta.remuneraciones[1])
+                fila(boleta.remuneraciones[2])
+                fila(boleta.remuneraciones[3])
+                fila(Concepto(nombre: "Total remuneraciones", monto: boleta.totalRemuneraciones), negrita: true)
+            }
+            VStack(alignment: .leading, spacing: 6) {
+                Text("RETENCIONES / DESCUENTOS")
+                    .font(.caption)
+                    .bold()
+                fila(boleta.descuentos[0])
+                fila(boleta.descuentos[1])
+                fila(boleta.descuentos[2])
+                fila(boleta.descuentos[3])
+                fila(boleta.descuentos[4])
+                fila(Concepto(nombre: "Total descuentos", monto: boleta.totalDescuentos), negrita: true)
+            }
+            VStack(alignment: .leading, spacing: 6) {
+                Text("APORTACIONES DEL EMPLEADOR")
+                    .font(.caption)
+                    .bold()
+                fila(Concepto(nombre: "EsSalud (9%)", monto: boleta.essalud))
+            }
+            Text("NETO A PAGAR: S/ \(formatoMonto(boleta.netoAPagar))")
+                .font(.title3)
+                .bold()
+        }
+        .padding()
+        .background(Color(.systemGray6))
+        .cornerRadius(12)
+    }
+
+    private func fila(_ concepto: Concepto, negrita: Bool = false) -> some View {
+        HStack {
+            Text(concepto.nombre)
+                .fontWeight(negrita ? .bold : .regular)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Text(formatoMonto(concepto.monto))
+                .fontWeight(negrita ? .bold : .regular)
+        }
     }
 }

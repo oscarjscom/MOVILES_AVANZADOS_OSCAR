@@ -16,6 +16,8 @@
 		DF1B5E03431399B74A1D92B2 /* Alumno.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD56958E9F283963311976 /* Alumno.swift */; };
 		7ED6C4C1FFF245362BE51A51 /* ModelContainerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5964A0879B83CA8EC9290FDA /* ModelContainerProvider.swift */; };
 		8CA87647139978F27CCADC11 /* NuevoAlumnoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1928FA111B784D9BF8F1C4 /* NuevoAlumnoView.swift */; };
+		C542A54F4C5AA04104D5A8D1 /* EditarAlumnoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C922F7EC101AA7B6707E604E /* EditarAlumnoView.swift */; };
+		14020B652BA712EDFD5E82A5 /* Curso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86475896B17E3C54FD17207D /* Curso.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		B4DD56958E9F283963311976 /* Alumno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alumno.swift; sourceTree = "<group>"; };
 		5964A0879B83CA8EC9290FDA /* ModelContainerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainerProvider.swift; sourceTree = "<group>"; };
 		7E1928FA111B784D9BF8F1C4 /* NuevoAlumnoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoAlumnoView.swift; sourceTree = "<group>"; };
+		C922F7EC101AA7B6707E604E /* EditarAlumnoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarAlumnoView.swift; sourceTree = "<group>"; };
+		86475896B17E3C54FD17207D /* Curso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curso.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				C64FFB7CEF8F2F01A5A83B20 /* ContentView.swift */,
+				86475896B17E3C54FD17207D /* Curso.swift */,
+				C922F7EC101AA7B6707E604E /* EditarAlumnoView.swift */,
 				7E1928FA111B784D9BF8F1C4 /* NuevoAlumnoView.swift */,
 				5964A0879B83CA8EC9290FDA /* ModelContainerProvider.swift */,
 				B4DD56958E9F283963311976 /* Alumno.swift */,
@@ -255,6 +261,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C07E5BDBC7FC99228BB88896 /* ContentView.swift in Sources */,
+				14020B652BA712EDFD5E82A5 /* Curso.swift in Sources */,
+				C542A54F4C5AA04104D5A8D1 /* EditarAlumnoView.swift in Sources */,
 				8CA87647139978F27CCADC11 /* NuevoAlumnoView.swift in Sources */,
 				7ED6C4C1FFF245362BE51A51 /* ModelContainerProvider.swift in Sources */,
 				DF1B5E03431399B74A1D92B2 /* Alumno.swift in Sources */,

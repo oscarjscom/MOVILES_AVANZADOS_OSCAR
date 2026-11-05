@@ -17,6 +17,7 @@
 		557FECB930720A2F00965EAC /* apple_lab11_01_UIKit_CoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FECB830720A2F00965EAC /* apple_lab11_01_UIKit_CoreDataUITests.swift */; };
 		557FECBB30720A2F00965EAC /* apple_lab11_01_UIKit_CoreDataUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FECBA30720A2F00965EAC /* apple_lab11_01_UIKit_CoreDataUITestsLaunchTests.swift */; };
 		00661FCCD268A29A0D347301 /* apple_lab11_01_UIKit_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEE65F53E9421CE50211670E /* apple_lab11_01_UIKit_CoreData.xcdatamodeld */; };
+		E80A9C222670BBE4F4C54977 /* ViewController+Relacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF56E64DC3CD6089065C3146 /* ViewController+Relacion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		557FECB830720A2F00965EAC /* apple_lab11_01_UIKit_CoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_lab11_01_UIKit_CoreDataUITests.swift; sourceTree = "<group>"; };
 		557FECBA30720A2F00965EAC /* apple_lab11_01_UIKit_CoreDataUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_lab11_01_UIKit_CoreDataUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AE679F02E8D28A79023C39C2 /* apple_lab11_01_UIKit_CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = apple_lab11_01_UIKit_CoreData.xcdatamodel; sourceTree = "<group>"; };
+		EF56E64DC3CD6089065C3146 /* ViewController+Relacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Relacion.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				557FEC9730720A2C00965EAC /* AppDelegate.swift */,
 				557FEC9930720A2C00965EAC /* SceneDelegate.swift */,
 				557FEC9B30720A2C00965EAC /* ViewController.swift */,
+				EF56E64DC3CD6089065C3146 /* ViewController+Relacion.swift */,
 				557FEC9D30720A2C00965EAC /* Main.storyboard */,
 				557FECA030720A2E00965EAC /* Assets.xcassets */,
 				EEE65F53E9421CE50211670E /* apple_lab11_01_UIKit_CoreData.xcdatamodeld */,
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				557FEC9C30720A2C00965EAC /* ViewController.swift in Sources */,
+				E80A9C222670BBE4F4C54977 /* ViewController+Relacion.swift in Sources */,
 				00661FCCD268A29A0D347301 /* apple_lab11_01_UIKit_CoreData.xcdatamodeld in Sources */,
 				557FEC9830720A2C00965EAC /* AppDelegate.swift in Sources */,
 				557FEC9A30720A2C00965EAC /* SceneDelegate.swift in Sources */,

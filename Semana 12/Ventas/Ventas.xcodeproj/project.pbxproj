@@ -29,6 +29,7 @@
 		A9E6DCFE6DC81DD4DC1AF989 /* NuevaVentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B86D83586539BFA655C21 /* NuevaVentaViewController.swift */; };
 		EA2948B9FD67FED100FF849D /* MisVentasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B873A128B68D90DEBCF4C3B3 /* MisVentasViewController.swift */; };
 		619D6755A4EF0CCD66DB2AE3 /* VentasEquipoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D95139F77D7F8253FD0C6F /* VentasEquipoViewController.swift */; };
+		EDFF30CA61EC69D8555C510F /* ResumenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8AAE2CB7B16373D287072 /* ResumenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		431B86D83586539BFA655C21 /* NuevaVentaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevaVentaViewController.swift; sourceTree = "<group>"; };
 		B873A128B68D90DEBCF4C3B3 /* MisVentasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisVentasViewController.swift; sourceTree = "<group>"; };
 		11D95139F77D7F8253FD0C6F /* VentasEquipoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentasEquipoViewController.swift; sourceTree = "<group>"; };
+		2CD8AAE2CB7B16373D287072 /* ResumenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				557FEC9730720A2C00965EAC /* AppDelegate.swift */,
+				2CD8AAE2CB7B16373D287072 /* ResumenViewController.swift */,
 				11D95139F77D7F8253FD0C6F /* VentasEquipoViewController.swift */,
 				B873A128B68D90DEBCF4C3B3 /* MisVentasViewController.swift */,
 				431B86D83586539BFA655C21 /* NuevaVentaViewController.swift */,
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				557FEC9830720A2C00965EAC /* AppDelegate.swift in Sources */,
+				EDFF30CA61EC69D8555C510F /* ResumenViewController.swift in Sources */,
 				619D6755A4EF0CCD66DB2AE3 /* VentasEquipoViewController.swift in Sources */,
 				EA2948B9FD67FED100FF849D /* MisVentasViewController.swift in Sources */,
 				A9E6DCFE6DC81DD4DC1AF989 /* NuevaVentaViewController.swift in Sources */,

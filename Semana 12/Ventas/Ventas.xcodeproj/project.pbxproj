@@ -23,6 +23,8 @@
 		5CE689222335500C17E133EE /* PrincipalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B559432EE6EF379D86EC648 /* PrincipalTabBarController.swift */; };
 		BB4780628758EA5678DC3269 /* CuentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD83FBBD1A9A3BCC0F9F7E /* CuentaViewController.swift */; };
 		07900AB783BE816085D2044C /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E3E13EA2824214945973E /* RegistroViewController.swift */; };
+		FBE1B3DDFF99A662AF296696 /* FilaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6DE29BBBDEC3A080870213 /* FilaCell.swift */; };
+		EB19C9507874D06D821247A8 /* ProductosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8230AF6857F3450981D51EF /* ProductosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		8B559432EE6EF379D86EC648 /* PrincipalTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalTabBarController.swift; sourceTree = "<group>"; };
 		39DD83FBBD1A9A3BCC0F9F7E /* CuentaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuentaViewController.swift; sourceTree = "<group>"; };
 		D56E3E13EA2824214945973E /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		6B6DE29BBBDEC3A080870213 /* FilaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilaCell.swift; sourceTree = "<group>"; };
+		D8230AF6857F3450981D51EF /* ProductosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				557FEC9730720A2C00965EAC /* AppDelegate.swift */,
+				D8230AF6857F3450981D51EF /* ProductosViewController.swift */,
+				6B6DE29BBBDEC3A080870213 /* FilaCell.swift */,
 				D56E3E13EA2824214945973E /* RegistroViewController.swift */,
 				39DD83FBBD1A9A3BCC0F9F7E /* CuentaViewController.swift */,
 				8B559432EE6EF379D86EC648 /* PrincipalTabBarController.swift */,
@@ -280,6 +286,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				557FEC9830720A2C00965EAC /* AppDelegate.swift in Sources */,
+				EB19C9507874D06D821247A8 /* ProductosViewController.swift in Sources */,
+				FBE1B3DDFF99A662AF296696 /* FilaCell.swift in Sources */,
 				07900AB783BE816085D2044C /* RegistroViewController.swift in Sources */,
 				BB4780628758EA5678DC3269 /* CuentaViewController.swift in Sources */,
 				5CE689222335500C17E133EE /* PrincipalTabBarController.swift in Sources */,

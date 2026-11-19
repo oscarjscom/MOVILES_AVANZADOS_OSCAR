@@ -28,19 +28,7 @@ struct AuthView: View {
                 Spacer()
 
                 if isSignedIn {
-                    VStack(spacing: 20) {
-                        Text("Welcome!")
-                            .font(.title)
-                            .foregroundColor(.green)
-
-                        Text("You are signed in")
-                            .font(.body)
-
-                        Button("Sign Out") {
-                            signOut()
-                        }
-                        .buttonStyle(SignOutButtonStyle())
-                    }
+                    MessagesView()
                 } else {
                     VStack(spacing: 15) {
                         TextField("Email", text: $email)
